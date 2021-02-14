@@ -21,7 +21,7 @@ module "example-production" {
   
   droplet_count = 10
   ssh_dir = "~/.ssh/example"
-  domain_name = "example.com"
+  domain = "example.com"
 }
 ```
 
