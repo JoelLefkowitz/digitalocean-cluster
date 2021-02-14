@@ -1,6 +1,6 @@
 # Tornado
 
-Terraform module to create a fully populated and tagged Digital Ocean project
+Create a populated and tagged Digital Ocean project
 
 ### Status
 
@@ -9,12 +9,31 @@ Terraform module to create a fully populated and tagged Digital Ocean project
 | Project    | ![license][license] ![release][release]                        |
 | Raised     | [![issues][issues]][issues_link] [![pulls][pulls]][pulls_link] |
 
-### Installing
+### Usage
 
-To build from source:
+```hcl
+module "example-production" {
+  source = "tornado"  
+  
+  project = "example"
+  env = "production"
+  
+  droplet_count = 10
+  ssh_dir = "~/.ssh/example"
+  domain_name = "example.com"
+}
+```
+
+### Utils
+
+To populate a list of ssh keys:
 
 ```bash
-make
+python keys.py                \
+    --project example         \
+    --env production          \
+    --droplet_count 10        \
+    --ssh_dir ~/.ssh/example  \
 ```
 
 ### Versioning
