@@ -65,9 +65,9 @@ None yet!
 
 <!--- Table links --->
 
-[license]: https://img.shields.io/github/license/joellefkowitz/tornado
-[release]: https://img.shields.io/github/v/tag/joellefkowitz/tornado
-[issues]: https://img.shields.io/github/issues/joellefkowitz/tornado "Issues"
-[issues_link]: https://github.com/JoelLefkowitz/tornado/issues
-[pulls]: https://img.shields.io/github/issues-pr/joellefkowitz/tornado "Pull requests"
-[pulls_link]: https://github.com/JoelLefkowitz/tornado/pulls
+[license]: https://img.shields.io/github/license/joellefkowitz/terraform-digitalocean-cluster
+[release]: https://img.shields.io/github/v/tag/joellefkowitz/terraform-digitalocean-cluster
+[issues]: https://img.shields.io/github/issues/joellefkowitz/terraform-digitalocean-cluster "Issues"
+[issues_link]: https://github.com/JoelLefkowitz/terraform-digitalocean-cluster/issues
+[pulls]: https://img.shields.io/github/issues-pr/joellefkowitz/terraform-digitalocean-cluster "Pull requests"
+[pulls_link]: https://github.com/JoelLefkowitz/terraform-digitalocean-cluster/pulls
