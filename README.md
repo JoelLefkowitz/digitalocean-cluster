@@ -1,6 +1,6 @@
-# Tornado
+# Terraform DigitalOcean Cluster
 
-Create a populated and tagged Digital Ocean project
+Create a populated and tagged DigitalOcean project
 
 ### Status
 
@@ -13,7 +13,7 @@ Create a populated and tagged Digital Ocean project
 
 ```hcl
 module "example-production" {
-  source = "tornado"  
+  source = "terraform-digitalocean-cluster"
   
   project = "example"
   env = "production"
