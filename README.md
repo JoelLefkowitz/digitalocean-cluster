@@ -12,9 +12,10 @@ Create a populated and tagged DigitalOcean project
 ### Usage
 
 ```hcl
-module "example-production" {
-  source = "terraform-digitalocean-cluster"
-  
+module "cluster" {
+  source  = "JoelLefkowitz/cluster/digitalocean"
+  version = "1.0.0"
+ 
   project = "example"
   env = "production"
   
