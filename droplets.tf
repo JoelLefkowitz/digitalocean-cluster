@@ -13,7 +13,7 @@ resource "digitalocean_droplet" "droplets" {
   private_networking = "true"
   tags               = [
       var.env,
-      count.index == 1 || count.index == 3 || count.index == 5 
+      count.index == 0 || count.index == 2 || count.index == 4
       ? "manager"
       : "worker"
     ]
