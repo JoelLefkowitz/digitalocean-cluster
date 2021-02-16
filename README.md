@@ -74,4 +74,4 @@ None yet!
 [issues_link]: https://github.com/JoelLefkowitz/terraform-digitalocean-cluster/issues
 [pulls]: https://img.shields.io/github/issues-pr/joellefkowitz/terraform-digitalocean-cluster "Pull requests"
 [pulls_link]: https://github.com/JoelLefkowitz/terraform-digitalocean-cluster/pulls
-[example]: https://github.com/JoelLefkowitz/sensors/raw/master/docs/example.png "Example"
+[example]: https://github.com/JoelLefkowitz/terraform-digitalocean-cluster/raw/master/docs/example.png "Example"
