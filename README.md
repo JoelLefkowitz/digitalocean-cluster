@@ -14,7 +14,7 @@ Create a populated and tagged DigitalOcean project
 ```hcl
 module "example-production" {
   source = "terraform-digitalocean-cluster"
-  version = "1.1.0"
+  version = "1.2.0"
 
   project = "example"
   env = "production"
@@ -24,6 +24,8 @@ module "example-production" {
   domain = "example.com"
 }
 ```
+
+![Example][example]
 
 ### Utils
 
@@ -72,3 +74,4 @@ None yet!
 [issues_link]: https://github.com/JoelLefkowitz/terraform-digitalocean-cluster/issues
 [pulls]: https://img.shields.io/github/issues-pr/joellefkowitz/terraform-digitalocean-cluster "Pull requests"
 [pulls_link]: https://github.com/JoelLefkowitz/terraform-digitalocean-cluster/pulls
+[example]: https://github.com/JoelLefkowitz/sensors/raw/master/docs/example.png "Example"
