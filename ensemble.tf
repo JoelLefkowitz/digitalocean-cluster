@@ -31,7 +31,7 @@ resource "digitalocean_project" "projects" {
 }
 
 resource "digitalocean_floating_ip" "floating_ips" {
-  count      = local.has_floating ? 1 : 0
+  count      = local.has_floating_ip ? 1 : 0
   droplet_id = local.primary_droplet.id
   region     = local.primary_droplet.region
   depends_on = [digitalocean_droplet.droplets]
