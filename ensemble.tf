@@ -8,7 +8,7 @@ locals {
   )
   
   primary_floating_ip = (
-    length(digitalocean_droplet.droplets) > 0
+    length(digitalocean_floating_ip.floating_ips) > 0
     ? digitalocean_floating_ip.floating_ips[0] 
     : null
   )
