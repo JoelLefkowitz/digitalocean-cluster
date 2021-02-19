@@ -2,12 +2,12 @@
 
 Create a populated and tagged DigitalOcean project
 
-### Status
+## Status
 
-| Source     | Shields                                                        |
-| ---------- | -------------------------------------------------------------- |
-| Project    | ![license][license] ![release][release]                        |
-| Raised     | [![issues][issues]][issues_link] [![pulls][pulls]][pulls_link] |
+| Source  | Shields                                                        |
+| ------- | -------------------------------------------------------------- |
+| Project | ![license][license] ![release][release]                        |
+| Raised  | [![issues][issues]][issues_link] [![pulls][pulls]][pulls_link] |
 
 ### Usage
 
@@ -18,7 +18,7 @@ module "example-production" {
 
   project = "example"
   env = "production"
-  
+
   droplet_count = 10
   ssh_dir = "~/.ssh/example"
   domain = "example.com"

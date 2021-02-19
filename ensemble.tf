@@ -4,10 +4,15 @@ resource "digitalocean_project" "project" {
   purpose     = "Web Application"
   environment = var.env
   resources   = [
+      for domain in digitalocean_domain.domains: 
+      droplet.urn,
       for droplet in digitalocean_droplet.droplets: 
       droplet.urn
     ]
-  depends_on = [digitalocean_droplet.droplets]
+  depends_on = [
+    digitalocean_droplet.droplets,
+    digitalocean_domain.domains
+  ]
 }
 
 resource "digitalocean_domain" "domain" {
