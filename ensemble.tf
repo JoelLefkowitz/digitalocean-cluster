@@ -1,6 +1,6 @@
 locals {
   has_domain = var.domain != null && var.droplet_count > 0
-  has_floating_ip = var.has_floating_ip && var.droplet_count > 0
+  has_floating_ip = var.has_floating && var.droplet_count > 0
   
   primary_droplet = (
     length(digitalocean_droplet.droplets) > 0
