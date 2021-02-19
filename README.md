@@ -14,7 +14,7 @@ Create a populated and tagged DigitalOcean project
 ```hcl
 module "example-production" {
   source = "terraform-digitalocean-cluster"
-  version = "1.3.0"
+  version = "1.3.1"
 
   project = "example"
   env = "production"
