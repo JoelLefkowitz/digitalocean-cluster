@@ -15,7 +15,7 @@ resource "digitalocean_project" "project" {
   ]
 }
 
-resource "digitalocean_domain" "domain" {
+resource "digitalocean_domain" "domains" {
   name       = var.domain
   count      = var.domain != null && var.droplet_count > 0 ? 1 : 0
   ip_address = digitalocean_floating_ip.floating_ip[0].ip_address
