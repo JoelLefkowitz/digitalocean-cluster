@@ -10,6 +10,10 @@ variable "domain" {
   default = null
 }
 
+variable "has_floating" {
+  default = false
+}
+
 variable "ssh_dir" {
   default = "~/.ssh/"
 }

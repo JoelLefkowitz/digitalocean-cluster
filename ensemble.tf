@@ -1,4 +1,20 @@
-resource "digitalocean_project" "project" {
+locals {
+  has_domain = var.domain != null && var.droplet_count > 0
+  
+  primary_droplet = (
+    length(digitalocean_droplet.droplets) > 0
+    ? digitalocean_droplet.droplets[0] 
+    : null
+  )
+  
+  primary_floating_ip = (
+    length(digitalocean_droplet.droplets) > 0
+    ? digitalocean_floating_ip.floating_ips[0] 
+    : null
+  )
+}
+
+resource "digitalocean_project" "projects" {
   name        = format("%s %s", var.project, var.env)
   description = format("%s %s resources", var.project, var.env)
   purpose     = "Web Application"
@@ -8,21 +24,28 @@ resource "digitalocean_project" "project" {
     [for droplet in digitalocean_droplet.droplets : droplet.urn]
   ])
   depends_on = [
-    digitalocean_droplet.droplets,
-    digitalocean_domain.domains
+    digitalocean_domain.domains,
+    digitalocean_droplet.droplets
   ]
 }
 
-resource "digitalocean_domain" "domains" {
-  name       = var.domain
-  count      = var.domain != null && var.droplet_count > 0 ? 1 : 0
-  ip_address = digitalocean_floating_ip.floating_ip[0].ip_address
+resource "digitalocean_floating_ip" "floating_ips" {
+  count      = var.has_floating ? 1 : 0
+  droplet_id = local.primary_droplet.id
+  region     = local.primary_droplet.region
   depends_on = [digitalocean_droplet.droplets]
 }
 
-resource "digitalocean_floating_ip" "floating_ip" {
-  count      = var.droplet_count > 0 ? 1 : 0
-  droplet_id = digitalocean_droplet.droplets[0].id
-  region     = digitalocean_droplet.droplets[0].region
-  depends_on = [digitalocean_droplet.droplets]
+resource "digitalocean_domain" "domains" {
+  name  = var.domain
+  count = local.has_domain ? 1 : 0
+  ip_address = (
+    var.has_floating
+    ? local.primary_floating_ip.ip_address
+    : local.primary_droplet.ipv4_address
+  )
+  depends_on = [
+    digitalocean_droplet.droplets,
+    digitalocean_floating_ip.floating_ips
+  ]
 }
