@@ -1,5 +1,6 @@
 locals {
   has_domain = var.domain != null && var.droplet_count > 0
+  has_floating_ip = var.has_floating_ip && var.droplet_count > 0
   
   primary_droplet = (
     length(digitalocean_droplet.droplets) > 0
@@ -30,7 +31,7 @@ resource "digitalocean_project" "projects" {
 }
 
 resource "digitalocean_floating_ip" "floating_ips" {
-  count      = var.has_floating ? 1 : 0
+  count      = local.has_floating ? 1 : 0
   droplet_id = local.primary_droplet.id
   region     = local.primary_droplet.region
   depends_on = [digitalocean_droplet.droplets]
