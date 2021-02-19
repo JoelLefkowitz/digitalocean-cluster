@@ -3,17 +3,17 @@ variable "project" {}
 variable "env" {}
 
 variable "droplet_count" {
-    default = 0
+  default = 0
 }
 
 variable "domain" {
-    default = null
+  default = null
 }
 
 variable "ssh_dir" {
-    default = "~/.ssh/"
+  default = "~/.ssh/"
 }
 
 variable "region" {
-    default = "lon1"
+  default = "lon1"
 }

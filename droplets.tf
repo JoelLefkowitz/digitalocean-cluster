@@ -11,13 +11,13 @@ resource "digitalocean_droplet" "droplets" {
   region             = var.region
   size               = "s-1vcpu-1gb"
   private_networking = "true"
-  tags               = [
-      var.env,
-      count.index == 0 || count.index == 2 || count.index == 4
-      ? "manager"
-      : "worker"
-    ]
-  ssh_keys           = [digitalocean_ssh_key.keys[count.index].fingerprint]
-  depends_on         = [digitalocean_ssh_key.keys]
+  tags = [
+    var.env,
+    count.index == 0 || count.index == 2 || count.index == 4
+    ? "manager"
+    : "worker"
+  ]
+  ssh_keys   = [digitalocean_ssh_key.keys[count.index].fingerprint]
+  depends_on = [digitalocean_ssh_key.keys]
 }
 
