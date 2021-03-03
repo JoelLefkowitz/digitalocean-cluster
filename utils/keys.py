@@ -1,7 +1,8 @@
 #!/usr/bin/env python
-import os
 import argparse
+import os
 from pathlib import Path
+
 from simple_pipes import pipe_call
 
 parser = argparse.ArgumentParser("Sensor data parser")
