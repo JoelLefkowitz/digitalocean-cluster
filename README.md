@@ -131,7 +131,7 @@ Lots of love to the open source community!
 
 [pulls]: https://github.com/JoelLefkowitz/terraform-digitalocean-cluster/pulls
 [issues]: https://github.com/JoelLefkowitz/terraform-digitalocean-cluster/issues
-[example]: https://github.com/JoelLefkowitz/terraform-digitalocean-cluster/raw/master/docs/example.png
+[example]: https://github.com/JoelLefkowitz/terraform-digitalocean-cluster/raw/master/example.png
 
 <!-- External links -->
 
