@@ -3,14 +3,12 @@
 Create a populated and tagged DigitalOcean project.
 
 ![Review](https://img.shields.io/github/actions/workflow/status/JoelLefkowitz/swarmroles-support/review.yml)
-![Version](https://img.shields.io/pypi/v/swarmroles-support)
-![Downloads](https://img.shields.io/pypi/dw/swarmroles-support)
 
 ## Example
 
 ![Example](docs/images/example.png)
 
-## Documentation\
+## Documentation
 
 Documentation and more detailed examples are hosted on [Github Pages](https://joellefkowitz.github.io/swarmroles-support).
 
