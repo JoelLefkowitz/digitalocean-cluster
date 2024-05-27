@@ -1,6 +1,0 @@
-project: terraform-digitalocean-cluster
-version: 1.4.5
-author: Joel Lefkowitz
-verbose_name: Terraform digitalocean cluster
-html_title: Terraform digitalocean cluster
-github_url: JoelLefkowitz/terraform-digitalocean-cluster
