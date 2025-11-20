@@ -2,7 +2,7 @@
 
 Create a populated and tagged DigitalOcean project.
 
-![Review](https://img.shields.io/github/actions/workflow/status/JoelLefkowitz/swarmroles-support/review.yml)
+![Review](https://img.shields.io/github/actions/workflow/status/JoelLefkowitz/swarmroles-support/review.yaml)
 
 ## Example
 
